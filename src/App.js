@@ -1,21 +1,18 @@
-import {Typography} from "@mui/material";
-import { useTranslation } from 'react-i18next';
-import LanguageSelector from './component/LanguageSelector';
-import ThemeSwitcher from './component/ThemeSwitcher';
-import Counter from './component/Counter';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Navbar from './component/Navbar';
+import Home from './page/Home';
+import Login from './page/Login';
 
 function App() {
 
-  const { t } = useTranslation();
-
   return (
-    <div className="App">
-      <Typography variant={"h1"}>{t("title")}</Typography>
-      <Typography variant={"body"}>{t("placeholder")}</Typography>
-      <LanguageSelector/>
-      <ThemeSwitcher />
-      <Counter />
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
   );
 }
 
