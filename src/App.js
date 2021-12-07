@@ -1,12 +1,18 @@
-import { useTranslation } from 'react-i18next';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+import Navbar from './component/Navbar';
+import Home from './page/Home';
+import Login from './page/Login';
 
 function App() {
-  const { t } = useTranslation();
 
   return (
-    <div className="App">
-
-    </div>
+    <Router>
+      <Navbar />
+      <Routes>
+        <Route exact path="/" element={<Home/>} />
+        <Route path="/login" element={<Login/>} />
+      </Routes>
+    </Router>
   );
 }
 
