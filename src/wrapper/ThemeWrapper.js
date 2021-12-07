@@ -18,7 +18,8 @@ const ThemeWrapper = (props) => {
       createTheme({
         palette: {
           mode
-        }
+        },
+        spacing: 3
       }),
     [mode]
   );
