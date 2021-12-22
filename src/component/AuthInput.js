@@ -1,18 +1,17 @@
 import { Grid, IconButton, InputAdornment, TextField } from "@mui/material";
-import { Visibility, VisibilityOff } from '@mui/icons-material';
-
+import { Visibility, VisibilityOff } from "@mui/icons-material";
 
 const AuthInput = ({
-                     name,
-                     handleChange,
-                     label,
-                     half,
-                     autoFocus,
-                     type,
-                     handleShowPassword,
-                     error,
-                     helperText
-                   }) => {
+  name,
+  handleChange,
+  label,
+  half,
+  autoFocus,
+  type,
+  handleShowPassword,
+  error,
+  helperText,
+}) => {
   return (
     <Grid item xs={12} sm={half ? 6 : 12}>
       <TextField
@@ -26,18 +25,22 @@ const AuthInput = ({
         type={type}
         error={error}
         helperText={helperText}
-        InputProps={name === 'password' ? {
-          endAdornment: (
-            <InputAdornment position="end">
-              <IconButton onClick={handleShowPassword}>
-                {type === "password" ? <Visibility/> : <VisibilityOff/>}
-              </IconButton>
-            </InputAdornment>
-          )
-        } : null}
+        InputProps={
+          name === "password"
+            ? {
+                endAdornment: (
+                  <InputAdornment position="end">
+                    <IconButton onClick={handleShowPassword}>
+                      {type === "password" ? <Visibility /> : <VisibilityOff />}
+                    </IconButton>
+                  </InputAdornment>
+                ),
+              }
+            : null
+        }
       />
     </Grid>
   );
-}
+};
 
 export default AuthInput;

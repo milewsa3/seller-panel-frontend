@@ -1,5 +1,5 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from "react";
+import PropTypes from "prop-types";
 
 const ReduxWrapper = ({ state, errorMessage, loadingMessage, ...rest }) => {
   return (
@@ -20,7 +20,7 @@ const ReduxWrapper = ({ state, errorMessage, loadingMessage, ...rest }) => {
 };
 
 ReduxWrapper.propTypes = {
-  state: PropTypes.object.isRequired
-}
+  state: PropTypes.object.isRequired,
+};
 
 export default ReduxWrapper;
