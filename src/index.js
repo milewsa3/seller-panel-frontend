@@ -2,9 +2,9 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { Provider } from "react-redux";
+import {Provider} from "react-redux";
 import "./i18n";
-import { store } from "./app/store";
+import {store} from "./app/store";
 import ThemeWrapper from "./wrapper/ThemeWrapper";
 
 ReactDOM.render(

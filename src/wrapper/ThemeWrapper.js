@@ -1,7 +1,7 @@
-import React, { useMemo } from "react";
-import { createTheme, ThemeProvider } from "@mui/material/styles";
+import React, {useMemo} from "react";
+import {createTheme, ThemeProvider} from "@mui/material/styles";
 import ColorModeContext from "../context/ColorModeContext";
-import { blue, pink } from "@mui/material/colors";
+import {blue, pink} from "@mui/material/colors";
 
 const getDesignTokens = (mode) => ({
   palette: {

@@ -1,5 +1,5 @@
-import { Grid, IconButton, InputAdornment, TextField } from "@mui/material";
-import { Visibility, VisibilityOff } from "@mui/icons-material";
+import {Grid, IconButton, InputAdornment, TextField} from "@mui/material";
+import {Visibility, VisibilityOff} from "@mui/icons-material";
 
 const AuthInput = ({
   name,

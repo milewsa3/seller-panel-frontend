@@ -1,7 +1,8 @@
-import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Box, Button, Divider, Grid, Paper, Typography } from "@mui/material";
+import React, {useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {Box, Button, Divider, Grid, Paper, Typography} from "@mui/material";
 import AuthInput from "./AuthInput";
+import {defaultUser} from "../user/userUtils";
 
 const initialState = {
   firstName: "",
@@ -13,7 +14,7 @@ const initialState = {
 
 const LoginForm = () => {
   const navigate = useNavigate();
-  const error = false;
+  const [error, setError] = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
@@ -35,7 +36,13 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    navigate("/");
+    if (true) {
+      // credentials are true
+      localStorage.setItem("user", JSON.stringify(defaultUser));
+      navigate("/");
+    } else {
+      // setError(true)
+    }
   };
 
   const styles = {

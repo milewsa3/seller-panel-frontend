@@ -13,24 +13,25 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import { makeStyles } from "@mui/styles";
-import React, { useEffect, useState } from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import {makeStyles} from "@mui/styles";
+import React, {useEffect, useState} from "react";
+import {NavLink, useLocation, useNavigate} from "react-router-dom";
 import MenuIcon from "@mui/icons-material/Menu";
 import HomeIcon from "@mui/icons-material/Home";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import InfoIcon from "@mui/icons-material/Info";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
-import { useTheme } from "@emotion/react";
-import { deepPurple } from "@mui/material/colors";
+import {useTheme} from "@emotion/react";
+import {deepPurple} from "@mui/material/colors";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
+import {getUser, isUserLoggedIn} from "../user/userUtils";
 
 const useStyles = makeStyles((theme) => ({
   topNav: {
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "1.0rem 4rem",
+    padding: "0.6rem 4rem",
   },
   links: {
     display: "flex",
@@ -70,17 +71,9 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const defaultUser = {
-  result: {
-    userName: "amilewski",
-    name: "Adrian",
-    imageUrl:
-      "https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460__340.png",
-  },
-};
-
 export default function Navbar() {
   const navigate = useNavigate();
+  const location = useLocation();
   const classes = useStyles();
   const theme = useTheme();
 
@@ -88,7 +81,11 @@ export default function Navbar() {
   const isMobileMenu = useMediaQuery(theme.breakpoints.down("sm"));
   const [menuOpened, setMenuOpened] = useState(false);
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    if (isUserLoggedIn()) {
+      setUser(getUser());
+    }
+  }, [location]);
 
   const logout = () => {
     navigate("/");
@@ -178,9 +175,9 @@ export default function Navbar() {
   return (
     <AppBar color={"primary"} position={"sticky"}>
       <Toolbar className={classes.topNav}>
-        <Typography variant="h3" component="h4">
+        <Typography variant="h4">
           <NavLink exact to="/" className={classes.clearLink}>
-            Seller's panel <ShoppingCartIcon fontSize={"large"} />
+            Seller's panel <ShoppingCartIcon fontSize={"medium"} />
           </NavLink>
         </Typography>
 
@@ -203,7 +200,7 @@ export default function Navbar() {
           </div>
         ) : (
           <div className={classes.links}>
-            {user ? (
+            {user ? ( // Options for logged in user
               <>
                 {tabsForLoggedInUsers.map((tab) => (
                   <NavLink
@@ -217,13 +214,13 @@ export default function Navbar() {
                 ))}
                 <Avatar
                   className={classes.purple}
-                  alt={user.result.name}
-                  src={user.result.imageUrl}
+                  alt={user.name}
+                  src={user.imageUrl}
                 >
-                  {user.result.name.charAt(0)}
+                  {user.name.charAt(0)}
                 </Avatar>
                 <Typography variant="h6" className={classes.userName}>
-                  {user.result.name}
+                  {user.name}
                 </Typography>
                 <Button
                   size="small"
@@ -236,6 +233,7 @@ export default function Navbar() {
                 </Button>
               </>
             ) : (
+              // Options for not logged in user
               <>
                 {tabsForNotLoggedInUsers.map((tab) => (
                   <NavLink

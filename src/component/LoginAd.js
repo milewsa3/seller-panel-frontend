@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import {Box, Typography} from "@mui/material";
 import CheckIcon from "@mui/icons-material/Check";
 
 const CheckedLabel = ({ children, ...props }) => {
