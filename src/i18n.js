@@ -10,15 +10,15 @@ i18n
 .use(LanguageDetector)
 .use(initReactI18next)
 .init({
-    fallbackLng: "en",
-    debug: true,
+  fallbackLng: "en",
+  debug: true,
 
-    interpolation: {
-        escapeValue: false
-    },
-    react: {
-        useSuspense: false
-    }
+  interpolation: {
+    escapeValue: false
+  },
+  react: {
+    useSuspense: false
+  }
 });
 
 export default i18n;

@@ -7,10 +7,10 @@ function App() {
 
   return (
     <Router>
-      <Navbar />
+      <Navbar/>
       <Routes>
-        <Route exact path="/" element={<Home/>} />
-        <Route path="/login" element={<Login/>} />
+        <Route exact path="/" element={<Home/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Routes>
     </Router>
   );

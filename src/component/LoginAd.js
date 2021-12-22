@@ -1,25 +1,25 @@
 import React from 'react';
-import { Typography } from '@mui/material';
-import { makeStyles } from '@mui/styles';
+import { Box, Typography } from '@mui/material';
 import CheckIcon from '@mui/icons-material/Check';
 
-const useStyles = makeStyles((theme) => ({
-  mainLabel: {
-    marginBottom: '15px',
-    fontWeight: '700'
-  }
-}))
+const CheckedLabel = ({ children, ...props }) => {
+  return (
+    <Typography sx={{ display: 'flex', alignItems: 'center', mb: 2 }}><CheckIcon sx={{ mr: 5 }}
+                                                                                 fontSize={"small"}/>{children}
+    </Typography>
+  )
+}
 
 const LoginAd = () => {
-  const classes = useStyles()
 
   return (
-    <div>
-      <Typography variant={"h6"} className={classes.mainLabel} margin={"15px"}><b>Connect with your clients</b></Typography>
-      <Typography><CheckIcon fontSize={"small"} /> See products and updates</Typography>
-      <Typography><CheckIcon fontSize={"small"} /> Check client's activity</Typography>
-      <Typography><CheckIcon fontSize={"small"} /> Find more</Typography>
-    </div>
+    <Box>
+      <Typography variant="h5" sx={{ mt: 15, mb: 10, fontWeight: 'bold' }}>Connect with your
+        clients</Typography>
+      <CheckedLabel>See products and updates</CheckedLabel>
+      <CheckedLabel>Check client's activity</CheckedLabel>
+      <CheckedLabel>Find more</CheckedLabel>
+    </Box>
   );
 };
 

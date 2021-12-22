@@ -7,14 +7,15 @@ import {
   IconButton,
   List,
   ListItem,
-  ListItemIcon, ListItemText,
+  ListItemIcon,
+  ListItemText,
   Toolbar,
   Typography,
   useMediaQuery
 } from "@mui/material";
 import { makeStyles } from '@mui/styles';
-import React, {useEffect, useState} from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { NavLink, useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import HomeIcon from '@mui/icons-material/Home';
 import MovieFilterIcon from '@mui/icons-material/MovieFilter';
@@ -24,7 +25,7 @@ import { useTheme } from '@emotion/react';
 import { deepPurple } from '@mui/material/colors';
 import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
-const useStyles = makeStyles( (theme) => ({
+const useStyles = makeStyles((theme) => ({
   topNav: {
     display: 'flex',
     justifyContent: 'space-between',
@@ -101,24 +102,23 @@ export default function Navbar() {
     setMenuOpened(false)
   }
 
-  const tabsForNotLoggedInUsers = [
-  ]
+  const tabsForNotLoggedInUsers = []
 
   const tabsForLoggedInUsers = [
     {
       title: 'Dashboard',
       path: '/dashboard',
-      icon: <HomeIcon />
+      icon: <HomeIcon/>
     },
     {
       title: 'Films',
       path: '/films',
-      icon: <MovieFilterIcon />
+      icon: <MovieFilterIcon/>
     },
     {
       title: 'About',
       path: '/about',
-      icon: <InfoIcon />
+      icon: <InfoIcon/>
     },
   ]
 
@@ -136,9 +136,10 @@ export default function Navbar() {
                 button
                 key={tab.title}
               >
-                <NavLink exact to={tab.path} activeClassName={classes.active} className={classes.mobileItem}>
+                <NavLink exact to={tab.path} activeClassName={classes.active}
+                         className={classes.mobileItem}>
                   <ListItemIcon>{tab.icon}</ListItemIcon>
-                  <ListItemText primary={tab.title} />
+                  <ListItemText primary={tab.title}/>
                 </NavLink>
               </ListItem>
             ))}
@@ -147,8 +148,8 @@ export default function Navbar() {
               key={"logout"}
             >
               <div className={classes.mobileItem} onClick={logout}>
-                <ListItemIcon><VpnKeyIcon /></ListItemIcon>
-                <ListItemText primary="Logout" />
+                <ListItemIcon><VpnKeyIcon/></ListItemIcon>
+                <ListItemText primary="Logout"/>
               </div>
             </ListItem>
           </>
@@ -159,25 +160,26 @@ export default function Navbar() {
                 button
                 key={tab.title}
               >
-                <NavLink exact to={tab.path} activeClassName={classes.active} className={classes.mobileItem}>
+                <NavLink exact to={tab.path} activeClassName={classes.active}
+                         className={classes.mobileItem}>
                   <ListItemIcon>{tab.icon}</ListItemIcon>
-                  <ListItemText primary={tab.title} />
+                  <ListItemText primary={tab.title}/>
                 </NavLink>
               </ListItem>
             ))}
           </>
         )}
       </List>
-      <Divider />
+      <Divider/>
     </div>
   )
 
-  return(
+  return (
     <AppBar color={"primary"} position={'sticky'}>
       <Toolbar className={classes.topNav}>
         <Typography variant="h3" component="h4">
           <NavLink exact to="/" className={classes.clearLink}>
-            Seller's panel <ShoppingCartIcon fontSize={"large"} />
+            Seller's panel <ShoppingCartIcon fontSize={"large"}/>
           </NavLink>
         </Typography>
 
@@ -188,7 +190,7 @@ export default function Navbar() {
                 aria-label="open drawer"
                 onClick={() => handleDrawerOpen()}
               >
-                <MenuIcon />
+                <MenuIcon/>
               </IconButton>
               <Drawer anchor="right" open={menuOpened} onClose={() => handleDrawerClose()}>
                 {mobileMenu()}
@@ -201,18 +203,24 @@ export default function Navbar() {
               {user ? (
                 <>
                   {tabsForLoggedInUsers.map(tab => (
-                    <NavLink exact to={tab.path} activeClassName={classes.active} key={tab.title}>{tab.title}</NavLink>
+                    <NavLink exact to={tab.path} activeClassName={classes.active}
+                             key={tab.title}>{tab.title}</NavLink>
                   ))}
-                  <Avatar className={classes.purple} alt={user.result.name} src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
-                  <Typography variant="h6" className={classes.userName}>{user.result.name}</Typography>
-                  <Button size="small" variant="contained" color="secondary" onClick={logout} className={classes.logoutBtn}>Logout</Button>
+                  <Avatar className={classes.purple} alt={user.result.name}
+                          src={user.result.imageUrl}>{user.result.name.charAt(0)}</Avatar>
+                  <Typography variant="h6"
+                              className={classes.userName}>{user.result.name}</Typography>
+                  <Button size="small" variant="contained" color="secondary" onClick={logout}
+                          className={classes.logoutBtn}>Logout</Button>
                 </>
               ) : (
                 <>
                   {tabsForNotLoggedInUsers.map(tab => (
-                    <NavLink exact to={tab.path} activeClassName={classes.active} key={tab.title}>{tab.title}</NavLink>
+                    <NavLink exact to={tab.path} activeClassName={classes.active}
+                             key={tab.title}>{tab.title}</NavLink>
                   ))}
-                  <img width={"30px"} height={"auto"} src={"https://cdn.countryflags.com/thumbs/poland/flag-400.png"} alt={""}/>
+                  <img width={"30px"} height={"auto"}
+                       src={"https://cdn.countryflags.com/thumbs/poland/flag-400.png"} alt={""}/>
                 </>
               )}
             </div>
