@@ -1,27 +1,31 @@
-import React from 'react';
-import LoginForm from '../component/LoginForm';
-import { Container } from '@mui/material';
-import LoginAd from '../component/LoginAd';
-import { makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    margin: 'auto',
-    marginTop: '30px',
-    width: '80%',
-    display: 'flex',
-    justifyContent: 'space-between',
-  }
-}))
+import React from "react";
+import LoginForm from "../component/LoginForm";
+import { Box, useMediaQuery } from "@mui/material";
+import LoginAd from "../component/LoginAd";
+import { useTheme } from "@emotion/react";
 
 const Login = () => {
-  const classes = useStyles()
+  const theme = useTheme();
+  const matchesDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  const styles = {
+    root: {
+      mx: "auto",
+      my: theme.spacing(14),
+      width: 4 / 5,
+      display: "flex",
+      justifyContent: "center",
+      [theme.breakpoints.up("md")]: {
+        justifyContent: "space-between",
+      },
+    },
+  };
 
   return (
-    <div className={classes.root}>
-      <LoginAd />
+    <Box sx={styles.root}>
+      {matchesDesktop && <LoginAd />}
       <LoginForm />
-    </div>
+    </Box>
   );
 };
 

@@ -1,6 +1,23 @@
-import React from 'react';
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import ColorModeContext from '../context/ColorModeContext';
+import React, { useMemo } from "react";
+import { createTheme, ThemeProvider } from "@mui/material/styles";
+import ColorModeContext from "../context/ColorModeContext";
+import { blue, pink } from "@mui/material/colors";
+
+const getDesignTokens = (mode) => ({
+  palette: {
+    mode,
+    ...(mode === "light"
+      ? {
+          primary: blue,
+          secondary: pink,
+        }
+      : {
+          primary: blue,
+          secondary: pink,
+        }),
+  },
+  spacing: 3,
+});
 
 const ThemeWrapper = (props) => {
   const [mode, setMode] = React.useState("light");
@@ -8,21 +25,12 @@ const ThemeWrapper = (props) => {
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-      }
+      },
     }),
     []
   );
 
-  const theme = React.useMemo(
-    () =>
-      createTheme({
-        palette: {
-          mode
-        },
-        spacing: 3
-      }),
-    [mode]
-  );
+  const theme = useMemo(() => createTheme(getDesignTokens(mode)), [mode]);
 
   return (
     <ColorModeContext.Provider value={colorMode}>

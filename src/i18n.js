@@ -4,21 +4,21 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
 i18n
-.use(Backend)
-// detect user language
-// learn more: https://github.com/i18next/i18next-browser-languageDetector
-.use(LanguageDetector)
-.use(initReactI18next)
-.init({
+  .use(Backend)
+  // detect user language
+  // learn more: https://github.com/i18next/i18next-browser-languageDetector
+  .use(LanguageDetector)
+  .use(initReactI18next)
+  .init({
     fallbackLng: "en",
     debug: true,
 
     interpolation: {
-        escapeValue: false
+      escapeValue: false,
     },
     react: {
-        useSuspense: false
-    }
-});
+      useSuspense: false,
+    },
+  });
 
 export default i18n;
