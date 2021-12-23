@@ -1,9 +1,9 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import LoginForm from "../component/LoginForm";
-import {Box, useMediaQuery} from "@mui/material";
+import { Box, useMediaQuery } from "@mui/material";
 import LoginAd from "../component/LoginAd";
-import {useTheme} from "@emotion/react";
-import {clearUser} from "../user/userUtils";
+import { useTheme } from "@emotion/react";
+import { clearUser } from "../user/userUtils";
 
 const Login = () => {
   const theme = useTheme();

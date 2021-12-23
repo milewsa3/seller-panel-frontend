@@ -1,6 +1,7 @@
-import React, {useEffect} from "react";
-import {isUserLoggedIn} from "../user/userUtils";
-import {useNavigate} from "react-router-dom";
+import React, { useEffect } from "react";
+import { isUserLoggedIn } from "../user/userUtils";
+import { useNavigate } from "react-router-dom";
+import ThemeSwitcher from "../navbar/ThemeSwitcher";
 
 const Home = () => {
   const navigate = useNavigate();
@@ -11,7 +12,11 @@ const Home = () => {
     }
   }, [navigate]);
 
-  return <div>Hello home</div>;
+  return (
+    <div>
+      <ThemeSwitcher />
+    </div>
+  );
 };
 
 export default Home;
