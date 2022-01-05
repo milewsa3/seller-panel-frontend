@@ -16,5 +16,12 @@
   "login-form-sign-in": "Sign in",
   "login-form-sign-up": "Sign up",
   "login-form-go-to-sign-up": "Don't have an account? Sign Up",
-  "login-form-go-to-sign-in": "Already have an account? Sign In"
+  "login-form-go-to-sign-in": "Already have an account? Sign In",
+
+  "en": "English",
+  "pl": "Polish",
+
+  "theme-switcher": "Theme Switcher",
+  "account-switcher": "Account change",
+  "logout": "Logout"
 }

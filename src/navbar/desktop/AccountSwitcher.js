@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
-import { getUser, isUserLoggedIn } from "../user/userUtils";
+import { getUser, isUserLoggedIn } from "../../util/user/userUtils";
 import { MenuItem, Select } from "@mui/material";
 
 const AccountSwitcher = ({ ...props }) => {
@@ -26,24 +26,20 @@ const AccountSwitcher = ({ ...props }) => {
   };
 
   const styles = {
-    formControl: {
-      "& .div": {
-        padding: 0,
-      },
+    select: {
+      opacity: 0.8,
+      transition: "0.3s",
+      "&:hover": { opacity: 0.95 },
+      "& .MuiSelect-select": { py: 3, bgcolor: "background.paper" },
     },
   };
 
   return (
     <Box {...props}>
-      <FormControl variant="outlined" sx={styles.formControl}>
+      <FormControl variant="outlined">
         <Select
           className="select-secondary"
-          sx={{
-            opacity: 0.8,
-            transition: "0.3s",
-            "&:hover": { opacity: 0.95 },
-            "& .MuiSelect-select": { py: 3, bgcolor: "background.paper" },
-          }}
+          sx={styles.select}
           color="secondary"
           value={currentAccount}
           onChange={handleAccountChange}

@@ -16,6 +16,12 @@
   "login-form-sign-in": "Zaloguj się",
   "login-form-sign-up": "Zarejestruj się",
   "login-form-go-to-sign-up": "Nie masz konta? Zarejestruj się",
-  "login-form-go-to-sign-in": "Masz już konto? Zaloguj się"
+  "login-form-go-to-sign-in": "Masz już konto? Zaloguj się",
 
+  "en": "Angielski",
+  "pl": "Polski",
+
+  "theme-switcher": "Zmiana motywu",
+  "account-switcher": "Zmiana konta",
+  "logout": "Wyloguj"
 }

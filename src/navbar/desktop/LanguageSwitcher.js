@@ -2,24 +2,14 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
+import { availableLanguages } from "../../util/language/LanguageUtils";
 
 const LanguageSwitcher = ({ ...props }) => {
   const { i18n } = useTranslation();
 
-  const languages = [
-    {
-      name: "en",
-      flagUrl: "/images/flags/united-kingdom-flag-icon-32.png",
-    },
-    {
-      name: "pl",
-      flagUrl: "/images/flags/poland-flag-icon-32.png",
-    },
-  ];
-
   return (
     <Box {...props}>
-      {languages.map(
+      {availableLanguages.map(
         (lang) =>
           i18n.language !== lang.name && (
             <IconButton

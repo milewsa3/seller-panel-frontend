@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { isUserLoggedIn } from "../user/userUtils";
+import { isUserLoggedIn } from "../util/user/userUtils";
 import { useNavigate } from "react-router-dom";
 import { Container, Typography } from "@mui/material";
 
