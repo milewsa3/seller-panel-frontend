@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
     display: "flex",
     justifyContent: "space-between",
     alignItems: "center",
-    padding: "0.6rem 4rem",
+    padding: "0.4rem 4rem",
   },
   clearLink: {
     textDecoration: "none",
