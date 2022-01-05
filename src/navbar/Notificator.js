@@ -4,8 +4,9 @@ import IconButton from "@mui/material/IconButton";
 import { Snackbar } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import { useTranslation } from "react-i18next";
+import Box from "@mui/material/Box";
 
-const Notificator = () => {
+const Notificator = ({ ...props }) => {
   const { t } = useTranslation();
   const [openedSnackbar, setOpenedSnackbar] = React.useState(false);
 
@@ -35,7 +36,7 @@ const Notificator = () => {
   );
 
   return (
-    <div>
+    <Box {...props}>
       <IconButton color="inherit" onClick={openSnackbar}>
         <NotificationsIcon />
       </IconButton>
@@ -46,7 +47,7 @@ const Notificator = () => {
         message={t("notification-empty")}
         action={notificationAction}
       />
-    </div>
+    </Box>
   );
 };
 

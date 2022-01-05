@@ -38,13 +38,8 @@ const LoginForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (true) {
-      // credentials are true
-      localStorage.setItem("user", JSON.stringify(defaultUser));
-      navigate("/");
-    } else {
-      // setError(true)
-    }
+    localStorage.setItem("user", JSON.stringify(defaultUser));
+    navigate("/");
   };
 
   const styles = {

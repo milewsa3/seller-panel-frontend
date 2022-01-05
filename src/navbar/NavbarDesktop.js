@@ -4,14 +4,21 @@ import ThemeSwitcher from "./ThemeSwitcher";
 import LanguageSwitcher from "./LanguageSwitcher";
 import Notificator from "./Notificator";
 import AccountSwitcher from "./AccountSwitcher";
+import { useNavigate } from "react-router-dom";
+import { logout } from "../user/userUtils";
+import { useTheme } from "@emotion/react";
 
-const NavbarDesktop = ({ user, logout, ...props }) => {
+const NavbarDesktop = ({ user, ...props }) => {
+  const theme = useTheme();
+
   const styles = {
     root: {
       display: "flex",
       alignItems: "center",
+      gap: theme.spacing(3),
     },
   };
+  const navigate = useNavigate();
 
   return (
     <Box sx={styles.root}>
@@ -25,7 +32,8 @@ const NavbarDesktop = ({ user, logout, ...props }) => {
             size="small"
             variant="contained"
             color="secondary"
-            onClick={logout}
+            onClick={() => logout(navigate)}
+            sx={{ mr: 3, ml: 8 }}
           >
             Logout
           </Button>

@@ -27,7 +27,6 @@ const ThemeWrapper = (props) => {
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
-        console.log(document.body.style.backgroundColor);
         if (document.body.style.backgroundColor === "rgb(18, 18, 18)") {
           document.body.style.backgroundColor = "rgb(255, 255, 255)";
         } else {

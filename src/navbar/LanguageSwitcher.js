@@ -1,8 +1,9 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import IconButton from "@mui/material/IconButton";
+import Box from "@mui/material/Box";
 
-const LanguageSwitcher = () => {
+const LanguageSwitcher = ({ ...props }) => {
   const { i18n } = useTranslation();
 
   const languages = [
@@ -17,7 +18,7 @@ const LanguageSwitcher = () => {
   ];
 
   return (
-    <div>
+    <Box {...props}>
       {languages.map(
         (lang) =>
           i18n.language !== lang.name && (
@@ -29,7 +30,7 @@ const LanguageSwitcher = () => {
             </IconButton>
           )
       )}
-    </div>
+    </Box>
   );
 };
 

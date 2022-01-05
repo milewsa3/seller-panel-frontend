@@ -29,10 +29,16 @@ const clearUser = () => {
   localStorage.setItem("user", "");
 };
 
+const logout = (navigate) => {
+  clearUser();
+  navigate("/login");
+};
+
 module.exports = {
   defaultUser,
   isUserLoggedIn,
   getUser,
   setUser,
   clearUser,
+  logout,
 };

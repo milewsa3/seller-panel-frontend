@@ -9,13 +9,14 @@ import {
   ListItemText,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import VpnKeyIcon from "@mui/icons-material/VpnKey";
 import HomeIcon from "@mui/icons-material/Home";
 import MovieFilterIcon from "@mui/icons-material/MovieFilter";
 import InfoIcon from "@mui/icons-material/Info";
 import { makeStyles } from "@mui/styles";
 import { deepPurple } from "@mui/material/colors";
+import { logout } from "../user/userUtils";
 
 const useStyles = makeStyles((theme) => ({
   topNav: {
@@ -62,9 +63,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const NavbarMobile = ({ user, logout, ...props }) => {
+const NavbarMobile = ({ user, ...props }) => {
   const [menuOpened, setMenuOpened] = useState(false);
   const classes = useStyles();
+  const navigate = useNavigate();
 
   const handleDrawerOpen = () => {
     setMenuOpened(true);
@@ -117,7 +119,10 @@ const NavbarMobile = ({ user, logout, ...props }) => {
               </ListItem>
             ))}
             <ListItem button key={"logout"}>
-              <div className={classes.mobileItem} onClick={logout}>
+              <div
+                className={classes.mobileItem}
+                onClick={() => logout(navigate)}
+              >
                 <ListItemIcon>
                   <VpnKeyIcon />
                 </ListItemIcon>

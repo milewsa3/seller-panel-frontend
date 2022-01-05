@@ -40,11 +40,6 @@ export default function Navbar() {
     }
   }, [navigate]);
 
-  const logout = () => {
-    clearUser();
-    navigate("/login");
-  };
-
   return (
     <AppBar color={"primary"} position={"sticky"}>
       <Toolbar className={classes.topNav}>
@@ -54,9 +49,9 @@ export default function Navbar() {
           </NavLink>
         </Typography>
         {isMobileMenu ? (
-          <NavbarMobile user={user} logout={logout} />
+          <NavbarMobile user={user} />
         ) : (
-          <NavbarDesktop user={user} logout={logout} />
+          <NavbarDesktop user={user} />
         )}
       </Toolbar>
     </AppBar>
