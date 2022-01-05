@@ -9,7 +9,7 @@ import { Box } from '@mui/material';
 const SideNavbarMobile = ({ user, handleDrawerClose, ...props }) => {
   return (
     <Box
-      sx={{width: '200px'}}
+      sx={{width: '220px'}}
       role="presentation"
       onClick={handleDrawerClose}
     >

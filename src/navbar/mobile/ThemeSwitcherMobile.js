@@ -3,7 +3,7 @@ import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import DarkModeIcon from "@mui/icons-material/DarkMode";
 import LightModeIcon from "@mui/icons-material/LightMode";
 import { useTheme } from "@emotion/react";
-import ColorModeContext from "../../context/ColorModeContext";
+import ColorModeContext from "../../util/theme/ColorModeContext";
 import { useTranslation } from "react-i18next";
 
 const ThemeSwitcherMobile = () => {

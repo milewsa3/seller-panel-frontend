@@ -1,6 +1,6 @@
 import React, { useMemo } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ColorModeContext from "../context/ColorModeContext";
+import ColorModeContext from "./ColorModeContext";
 import { blue, pink } from "@mui/material/colors";
 import { useMediaQuery } from "@mui/material";
 

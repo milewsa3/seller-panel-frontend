@@ -1,9 +1,9 @@
-import React, { useEffect } from "react";
-import { isUserLoggedIn } from "../util/user/userUtils";
-import { useNavigate } from "react-router-dom";
-import { Container, Typography } from "@mui/material";
+import React, { useEffect } from 'react';
+import { Container, Typography } from '@mui/material';
+import { useNavigate } from 'react-router-dom';
+import { isUserLoggedIn } from '../util/user/userUtils';
 
-const Home = () => {
+const Dashboard = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,4 +21,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Dashboard;

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
-import LoginForm from "../component/LoginForm";
+import LoginForm from "./LoginForm";
 import { Box, useMediaQuery } from "@mui/material";
-import LoginAd from "../component/LoginAd";
+import LoginAd from "./LoginAd";
 import { useTheme } from "@emotion/react";
 import { clearUser } from "../util/user/userUtils";
 
