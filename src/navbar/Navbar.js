@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useTheme } from "@emotion/react";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { clearUser, getUser, isUserLoggedIn } from "../user/userUtils";
+import { getUser, isUserLoggedIn } from "../user/userUtils";
 import NavbarMobile from "./NavbarMobile";
 import NavbarDesktop from "./NavbarDesktop";
 import { useTranslation } from "react-i18next";

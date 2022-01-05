@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
 import { getUser, isUserLoggedIn } from "../user/userUtils";
-import { MenuItem, NativeSelect, Select } from "@mui/material";
+import { MenuItem, Select } from "@mui/material";
 
 const AccountSwitcher = ({ ...props }) => {
   const [currentAccount, setCurrentAccount] = useState("");

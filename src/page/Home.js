@@ -1,7 +1,6 @@
 import React, { useEffect } from "react";
 import { isUserLoggedIn } from "../user/userUtils";
 import { useNavigate } from "react-router-dom";
-import ThemeSwitcher from "../navbar/ThemeSwitcher";
 import { Container, Typography } from "@mui/material";
 
 const Home = () => {
