@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
-import "./i18n";
-import { store } from "./app/store";
-import ThemeWrapper from "./wrapper/ThemeWrapper";
+import "./util/language/i18n";
+import { store } from "./redux/store";
+import ThemeWrapper from "./util/theme/ThemeWrapper";
 
 ReactDOM.render(
   <React.StrictMode>

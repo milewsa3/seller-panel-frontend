@@ -1,12 +1,17 @@
-import React from "react";
-import LoginForm from "../component/LoginForm";
+import React, { useEffect } from "react";
+import LoginForm from "./LoginForm";
 import { Box, useMediaQuery } from "@mui/material";
-import LoginAd from "../component/LoginAd";
+import LoginAd from "./LoginAd";
 import { useTheme } from "@emotion/react";
+import { clearUser } from "../util/user/userUtils";
 
 const Login = () => {
   const theme = useTheme();
   const matchesDesktop = useMediaQuery(theme.breakpoints.up("md"));
+
+  useEffect(() => {
+    clearUser();
+  }, []);
 
   const styles = {
     root: {

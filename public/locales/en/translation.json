@@ -1,4 +1,27 @@
 {
-  "title": "todos",
-  "placeholder": "What needs to be done?"
+  "navbar-title": "Seller's Panel",
+
+  "login-ad-title": "Connect with your clients",
+  "login-ad-body-1": "See products and updates",
+  "login-ad-body-2": "Check client's activity",
+  "login-ad-body-3": "Find more",
+
+  "notification-empty": "No new notifications",
+
+  "login-form-email": "Email Address",
+  "login-form-password": "Password",
+  "login-form-repeat-password": "Repeat Password",
+  "login-form-first-name": "First Name",
+  "login-form-last-name": "Last Name",
+  "login-form-sign-in": "Sign in",
+  "login-form-sign-up": "Sign up",
+  "login-form-go-to-sign-up": "Don't have an account? Sign Up",
+  "login-form-go-to-sign-in": "Already have an account? Sign In",
+
+  "en": "English",
+  "pl": "Polish",
+
+  "theme-switcher": "Theme Switcher",
+  "account-switcher": "Account change",
+  "logout": "Logout"
 }

@@ -1,7 +1,8 @@
 import React, { useMemo } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import ColorModeContext from "../context/ColorModeContext";
+import ColorModeContext from "./ColorModeContext";
 import { blue, pink } from "@mui/material/colors";
+import { useMediaQuery } from "@mui/material";
 
 const getDesignTokens = (mode) => ({
   palette: {
@@ -20,11 +21,17 @@ const getDesignTokens = (mode) => ({
 });
 
 const ThemeWrapper = (props) => {
-  const [mode, setMode] = React.useState("light");
+  const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
+  const [mode, setMode] = React.useState(prefersDarkMode ? "dark" : "light");
   const colorMode = React.useMemo(
     () => ({
       toggleColorMode: () => {
         setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
+        if (document.body.style.backgroundColor === "rgb(18, 18, 18)") {
+          document.body.style.backgroundColor = "rgb(255, 255, 255)";
+        } else {
+          document.body.style.backgroundColor = "rgb(18, 18, 18)";
+        }
       },
     }),
     []

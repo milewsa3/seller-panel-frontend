@@ -1,4 +1,27 @@
 {
-  "title": "Tytuł",
-  "placeholder": "Czego potrzebujesz ziomeczku?"
+  "navbar-title": "Panel sprzedawcy",
+
+  "login-ad-title": "Połącz się z klientami",
+  "login-ad-body-1": "Zobacz produkty i nowości",
+  "login-ad-body-2": "Sprawdź aktywność klientów",
+  "login-ad-body-3": "Zobacz więcej",
+
+  "notification-empty": "Brak nowych powiadomień",
+
+  "login-form-email": "Email",
+  "login-form-password": "Hasło",
+  "login-form-repeat-password": "Powtórz hasło",
+  "login-form-first-name": "Imię",
+  "login-form-last-name": "Nazwisko",
+  "login-form-sign-in": "Zaloguj się",
+  "login-form-sign-up": "Zarejestruj się",
+  "login-form-go-to-sign-up": "Nie masz konta? Zarejestruj się",
+  "login-form-go-to-sign-in": "Masz już konto? Zaloguj się",
+
+  "en": "Angielski",
+  "pl": "Polski",
+
+  "theme-switcher": "Zmiana motywu",
+  "account-switcher": "Zmiana konta",
+  "logout": "Wyloguj"
 }
