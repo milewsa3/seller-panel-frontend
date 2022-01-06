@@ -3,14 +3,17 @@ import Box from "@mui/material/Box";
 import { Paper, Typography } from "@mui/material";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import IconButton from "@mui/material/IconButton";
+import { useTranslation } from "react-i18next";
 
 const WidgetLayout = ({
   navComponent,
   children,
   title,
   notImplemented,
+  disableNavigate,
   ...props
 }) => {
+  const { t } = useTranslation();
   const topNavHeight = 12;
 
   const styles = {
@@ -41,14 +44,16 @@ const WidgetLayout = ({
           {title}
         </Typography>
         {navComponent}
-        <IconButton>
-          <IosShareIcon
-            sx={{
-              fontSize: { xs: 20, sm: 22, md: 25 },
-              color: "secondary.contrastText",
-            }}
-          />
-        </IconButton>
+        {!disableNavigate && (
+          <IconButton>
+            <IosShareIcon
+              sx={{
+                fontSize: { xs: 20, sm: 22, md: 25 },
+                color: "secondary.contrastText",
+              }}
+            />
+          </IconButton>
+        )}
       </Box>
       {notImplemented ? (
         <Box
@@ -68,7 +73,7 @@ const WidgetLayout = ({
               p: 5,
             }}
           >
-            Not implemented
+            {t("not-implemented")}
           </Typography>
         </Box>
       ) : (

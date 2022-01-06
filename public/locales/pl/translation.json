@@ -31,5 +31,17 @@
   "sales-advice": "Porady sprzedażowe",
   "sales-chart": "Wykres sprzedaży",
   "quality-of-sales": "Jakość Sprzedaży",
-  "not-implemented": "Nie zaimplementowane"
+  "not-implemented": "Nie zaimplementowane",
+
+  "orders-unpaid": "Nie zapłacone",
+  "orders-not-send": "Nie wysłane",
+  "orders-returns": "Zwrócone",
+  "orders-promotion": "Promocja ofert",
+  "orders-promotion-low": "Niska",
+  "orders-promotion-medium": "Średnia",
+  "orders-promotion-high": "Wysoka",
+
+  "orders-promotion-low-tooltip": "Najtańsza promocja",
+  "orders-promotion-medium-tooltip": "Średnia promocja",
+  "orders-promotion-high-tooltip": "Najwyższa promocja"
 }

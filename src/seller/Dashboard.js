@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { isUserLoggedIn } from "../util/user/userUtils";
-import OrdersWidget from "./widget/OrdersWidget";
+import OrdersWidget from "./widget/order/OrdersWidget";
 import RankingOfOffersWidget from "./widget/RankingOfOffersWidget";
 import BuyerFeedbackWidget from "./widget/BuyerFeedbackWidget";
 import SalesAdviceWidget from "./widget/SalesAdviceWidget";
