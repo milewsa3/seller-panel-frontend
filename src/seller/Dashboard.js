@@ -13,11 +13,11 @@ const Dashboard = () => {
   }, [navigate]);
 
   return (
-    <Grid container sx={{ my: 8, height: '560px', width: '90%', mx: 'auto'}} spacing={3}>
-      <Grid item xs={5}>
+    <Grid container sx={{ my: 8, height: {xs: '700px', md: '560px'}, width: '90%', mx: 'auto'}} spacing={3}>
+      <Grid item xs={12} md={5}>
         <Paper sx={{height: '100%'}}>Orders</Paper>
       </Grid>
-      <Grid item xs={7} container spacing={3} direction="column">
+      <Grid item xs={12} md={7} container spacing={3} direction="column">
         <Grid item xs={9} container spacing={3}>
           <Grid item xs={3}>
             <Paper sx={{height: '100%'}}>Buyer feedback</Paper>
