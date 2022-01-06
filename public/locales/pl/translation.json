@@ -23,5 +23,13 @@
 
   "theme-switcher": "Zmiana motywu",
   "account-switcher": "Zmiana konta",
-  "logout": "Wyloguj"
+  "logout": "Wyloguj",
+
+  "orders": "Zamówienia",
+  "buyer-feedback": "Opinie kupujących",
+  "ranking-of-offers": "Ranking Ofert",
+  "sales-advice": "Porady sprzedażowe",
+  "sales-chart": "Wykres sprzedaży",
+  "quality-of-sales": "Jakość Sprzedaży",
+  "not-implemented": "Nie zaimplementowane"
 }
