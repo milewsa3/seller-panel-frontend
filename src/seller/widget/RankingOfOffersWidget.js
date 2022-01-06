@@ -1,10 +1,9 @@
-import React from 'react';
+import React from "react";
+import WidgetLayout from "./WidgetLayout";
 
 const RankingOfOffersWidget = () => {
   return (
-    <div>
-      Ranking of offers
-    </div>
+    <WidgetLayout title={"Ranking of offers"}>Ranking of offers</WidgetLayout>
   );
 };
 

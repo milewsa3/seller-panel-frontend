@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import WidgetLayout from "./WidgetLayout";
 
 const SalesChartWidget = () => {
-  return (
-    <div>
-      Sales chart
-    </div>
-  );
+  return <WidgetLayout title={"Sales chart"} notImplemented />;
 };
 
 export default SalesChartWidget;

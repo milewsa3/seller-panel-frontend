@@ -1,10 +1,11 @@
-import React from 'react';
+import React from "react";
+import WidgetLayout from "./WidgetLayout";
 
 const SalesAdviceWidget = () => {
   return (
-    <div>
-      Sales advice
-    </div>
+    <WidgetLayout title={"Sales advice"} notImplemented>
+      Helllo orders
+    </WidgetLayout>
   );
 };
 

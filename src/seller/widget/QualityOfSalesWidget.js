@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import WidgetLayout from "./WidgetLayout";
 
 const QualityOfSalesWidget = () => {
-  return (
-    <div>
-      Quality of sales
-    </div>
-  );
+  return <WidgetLayout title={"Quality of sales"} notImplemented />;
 };
 
 export default QualityOfSalesWidget;

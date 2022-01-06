@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react";
+import WidgetLayout from "./WidgetLayout";
 
 const BuyerFeedbackWidget = () => {
-  return (
-    <div>
-      Buyer Feedback
-    </div>
-  );
+  return <WidgetLayout title={"Buyer feedback"} notImplemented />;
 };
 
 export default BuyerFeedbackWidget;
