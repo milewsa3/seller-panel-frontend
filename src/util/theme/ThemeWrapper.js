@@ -12,10 +12,7 @@ const getDesignTokens = (mode) => ({
           primary: blue,
           secondary: pink,
         }
-      : {
-          primary: blue,
-          secondary: pink,
-        }),
+      : {}),
   },
   spacing: 3,
 });
