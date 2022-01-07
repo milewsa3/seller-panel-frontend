@@ -3,13 +3,12 @@ import ThemeSwitcherMobile from "./ThemeSwitcherMobile";
 import LanguageSwitcherMobile from "./LanguageSwitcherMobile";
 import AccountSwitcherMobile from "./AccountSwitcherMobile";
 import LogoutMobile from "./LogoutMobile";
-import { Box } from '@mui/material';
-
+import { Box } from "@mui/material";
 
 const SideNavbarMobile = ({ user, handleDrawerClose, ...props }) => {
   return (
     <Box
-      sx={{width: '220px'}}
+      sx={{ width: "220px" }}
       role="presentation"
       onClick={handleDrawerClose}
     >

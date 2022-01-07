@@ -23,5 +23,25 @@
 
   "theme-switcher": "Theme Switcher",
   "account-switcher": "Account change",
-  "logout": "Logout"
+  "logout": "Logout",
+
+  "orders": "Orders",
+  "buyer-feedback": "Buyer feedback",
+  "ranking-of-offers": "Ranking of offers",
+  "sales-advice": "Sales advice",
+  "sales-chart": "Sales chart",
+  "quality-of-sales": "Quality of sales",
+  "not-implemented": "Not implemented",
+
+  "orders-unpaid": "Unpaid",
+  "orders-not-send": "Not send",
+  "orders-returns": "Returns",
+  "orders-promotion": "Offers promotion",
+  "orders-promotion-low": "Low",
+  "orders-promotion-medium": "Medium",
+  "orders-promotion-high": "High",
+
+  "orders-promotion-low-tooltip": "The cheapest promotion",
+  "orders-promotion-medium-tooltip": "Medium promotion",
+  "orders-promotion-high-tooltip": "The most expensive promotion"
 }
