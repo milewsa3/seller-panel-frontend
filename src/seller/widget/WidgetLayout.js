@@ -4,8 +4,10 @@ import { Paper, Typography } from "@mui/material";
 import IosShareIcon from "@mui/icons-material/IosShare";
 import IconButton from "@mui/material/IconButton";
 import { useTranslation } from "react-i18next";
+import PropTypes from 'prop-types';
 
 const WidgetLayout = ({
+  sx = [],
   navComponent,
   children,
   title,
@@ -30,7 +32,7 @@ const WidgetLayout = ({
   };
 
   return (
-    <Paper elevation={3} sx={styles.root}>
+    <Paper elevation={3} sx={[styles.root,  ...(Array.isArray(sx) ? sx : [sx])]}>
       <Box sx={styles.topNav}>
         <Typography
           sx={{
@@ -81,6 +83,17 @@ const WidgetLayout = ({
       )}
     </Paper>
   );
+};
+
+WidgetLayout.propTypes = {
+  children: PropTypes.node,
+  sx: PropTypes.oneOfType([
+    PropTypes.arrayOf(
+      PropTypes.oneOfType([PropTypes.func, PropTypes.object, PropTypes.bool]),
+    ),
+    PropTypes.func,
+    PropTypes.object,
+  ]),
 };
 
 export default WidgetLayout;

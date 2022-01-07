@@ -32,27 +32,35 @@ const Dashboard = () => {
       <Grid item xs={12} md={5}>
         <OrdersWidget />
       </Grid>
-      <Grid item xs={12} md={7} container spacing={3} direction="column">
-        <Grid item xs={9} container spacing={3}>
-          <Grid item xs={5} md={4}>
-            <BuyerFeedbackWidget />
-          </Grid>
-          <Grid item xs={7} md={8} container spacing={3} direction={"column"}>
-            <Grid item xs={8}>
-              <RankingOfOffersWidget />
-            </Grid>
-            <Grid item xs={4} container spacing={3}>
-              <Grid item xs={6}>
-                <SalesAdviceWidget />
+      <Grid item xs={12} md={7}>
+        <Grid container spacing={3} direction="column">
+          <Grid item xs={9}>
+            <Grid container spacing={3}>
+              <Grid item xs={5} md={4}>
+                <BuyerFeedbackWidget />
               </Grid>
-              <Grid item xs={6}>
-                <SalesChartWidget />
+              <Grid item xs={7} md={8}>
+                <Grid container spacing={3} direction={"column"}>
+                  <Grid item xs={8}>
+                    <RankingOfOffersWidget />
+                  </Grid>
+                  <Grid item xs={4} >
+                    <Grid container spacing={3}>
+                      <Grid item xs={6}>
+                        <SalesAdviceWidget />
+                      </Grid>
+                      <Grid item xs={6}>
+                        <SalesChartWidget />
+                      </Grid>
+                    </Grid>
+                  </Grid>
+                </Grid>
               </Grid>
             </Grid>
           </Grid>
-        </Grid>
-        <Grid item xs={3}>
-          <QualityOfSalesWidget />
+          <Grid item xs={3}>
+            <QualityOfSalesWidget />
+          </Grid>
         </Grid>
       </Grid>
     </Grid>
