@@ -37,7 +37,9 @@ const OrdersWidget = () => {
           sx={{ width: "90%", mx: "auto", mt: 0.5, mb: 3 }}
         >
           <Grid item xs={12} zeroMinWidth>
-            <Typography noWrap variant={"h6"}>{t("orders-promotion")}</Typography>
+            <Typography noWrap variant={"h6"}>
+              {t("orders-promotion")}
+            </Typography>
           </Grid>
           <Grid item xs>
             <PromotionTile
