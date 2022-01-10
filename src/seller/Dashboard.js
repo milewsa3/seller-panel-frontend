@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { isUserLoggedIn } from "../util/user/userUtils";
-import OrdersWidget from "./widget/order/OrdersWidget";
-import RankingOfOffersWidget from "./widget/RankingOfOffersWidget";
-import BuyerFeedbackWidget from "./widget/BuyerFeedbackWidget";
-import SalesAdviceWidget from "./widget/SalesAdviceWidget";
-import SalesChartWidget from "./widget/SalesChartWidget";
-import QualityOfSalesWidget from "./widget/QualityOfSalesWidget";
+import OrdersWidget from "./orders/OrdersWidget";
+import RankingOfOffersWidget from "./rankingOfOffers/RankingOfOffersWidget";
+import BuyerFeedbackWidget from "./buyerFeedback/BuyerFeedbackWidget";
+import SalesAdviceWidget from "./salesAdvice/SalesAdviceWidget";
+import SalesChartWidget from "./salesChart/SalesChartWidget";
+import QualityOfSalesWidget from "./qualityOfSales/QualityOfSalesWidget";
 
 const Dashboard = () => {
   const navigate = useNavigate();
