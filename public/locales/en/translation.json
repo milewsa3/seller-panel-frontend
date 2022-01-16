@@ -43,5 +43,15 @@
 
   "orders-promotion-low-tooltip": "The cheapest promotion",
   "orders-promotion-medium-tooltip": "Medium promotion",
-  "orders-promotion-high-tooltip": "The most expensive promotion"
+  "orders-promotion-high-tooltip": "The most expensive promotion",
+
+  "orders-filter": "Filter",
+  "orders-accuracy-the-greatest":  "accuracy: the greatest",
+  "orders-accuracy-the-smallest":  "accuracy: the smallest",
+  "orders-price-the-highest":  "price: the highest",
+  "orders-price-the-lowest":  "price: the lowest",
+  "orders-bought-by": "Bought by",
+  "orders-address": "Address",
+  "orders-telephone": "tel",
+  "orders-delivery-company": "Delivery company"
 }

@@ -1,9 +1,11 @@
 import React from "react";
 import { Paper, Typography, useMediaQuery } from "@mui/material";
 import Box from "@mui/material/Box";
+import { useTranslation } from "react-i18next";
 
 const OrderPaper = ({ order, ...props }) => {
   const matchesMdSize = useMediaQuery((theme) => theme.breakpoints.up("md"));
+  const { t } = useTranslation();
 
   return (
     <Paper
@@ -44,17 +46,17 @@ const OrderPaper = ({ order, ...props }) => {
           {order.itemFullName} {order.price} {order.currency}
         </Typography>
         <Typography variant={"h6"}>
-          bought by: <b>{order.boughtBy}</b>
+          {t("orders-bought-by")}: <b>{order.boughtBy}</b>
         </Typography>
         <Typography variant={"subtitle2"}>
-          Address: <b>{order.address}</b>
+          {t("orders-address")}: <b>{order.address}</b>
         </Typography>
         <Typography variant={"subtitle2"}>
-          tel. <b>{order.telephone}</b>
+          {t("orders-telephone")}. <b>{order.telephone}</b>
         </Typography>
         {!matchesMdSize && (
           <Typography variant={"subtitle2"}>
-            Delivery company: <b>{order.deliveryCompany}</b>
+            {t("orders-delivery-company")}: <b>{order.deliveryCompany}</b>
           </Typography>
         )}
       </Box>

@@ -43,5 +43,15 @@
 
   "orders-promotion-low-tooltip": "Najtańsza promocja",
   "orders-promotion-medium-tooltip": "Średnia promocja",
-  "orders-promotion-high-tooltip": "Najwyższa promocja"
+  "orders-promotion-high-tooltip": "Najwyższa promocja",
+
+  "orders-filter": "Filtr",
+  "orders-accuracy-the-greatest":  "dopasowanie: największe",
+  "orders-accuracy-the-smallest":  "dopasowanie: najmniejsze",
+  "orders-price-the-highest":  "cena: od najwyższej",
+  "orders-price-the-lowest":  "cena: od najniższej",
+  "orders-bought-by": "Kupione przez",
+  "orders-address": "Adres",
+  "orders-telephone": "tel",
+  "orders-delivery-company": "Firma dostawcza"
 }
