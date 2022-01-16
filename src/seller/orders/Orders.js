@@ -21,7 +21,7 @@ const fetchedData = [
   },
   {
     itemFullName: "Book John Flanagan - “How to train your dog?”",
-    imgUrl: "/images/orders/notebook.png",
+    imgUrl: "/images/orders/python-tutorial.jpg",
     price: 1200,
     currency: "zł",
     boughtBy: "Bartosz Zdybel",
@@ -31,7 +31,7 @@ const fetchedData = [
   },
   {
     itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-    imgUrl: "/images/orders/notebook.png",
+    imgUrl: "/images/orders/harry-potter-books.webp",
     price: 400,
     currency: "zł",
     boughtBy: "Bartosz Zdybel",
@@ -41,7 +41,7 @@ const fetchedData = [
   },
   {
     itemFullName: "Book John Flanagan - “How to train your dog?”",
-    imgUrl: "/images/orders/notebook.png",
+    imgUrl: "/images/orders/java-tutorial.jpg",
     price: 1200,
     currency: "zł",
     boughtBy: "Bartosz Zdybel",

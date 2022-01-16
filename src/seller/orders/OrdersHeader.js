@@ -25,7 +25,7 @@ const OrdersHeader = ({ ordersType, ...params }) => {
 
   const handleSelectChange = (e) => {
     const orderType = e.target.value;
-    navigate("/orders/" + orderType);
+    navigate("/orders/" + orderType + "/1");
   };
 
   return (

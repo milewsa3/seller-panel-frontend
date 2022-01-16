@@ -21,9 +21,16 @@ const OrderPaper = ({ order, ...props }) => {
         component={"img"}
         src={order.imgUrl}
         alt={""}
-        width={"auto"}
-        height={"150px"}
-        sx={{ objectFit: "cover" }}
+        width={"120px"}
+        height={"120px"}
+        sx={{
+          objectFit: "cover",
+          borderRadius: "50%",
+          m: 2,
+          mr: 4,
+          borderStyle: "solid",
+          borderColor: "secondary.main",
+        }}
       />
       <Box
         sx={{
