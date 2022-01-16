@@ -1,10 +1,11 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { Divider, IconButton, Paper, Typography } from "@mui/material";
-import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { Divider, Paper, Typography } from "@mui/material";
 import Box from "@mui/material/Box";
 import FilterSelect from "./FilterSelect";
 import OrderPaper from "./OrderPaper";
+import OrdersHeader from "./OrdersHeader";
+import { availableOrdersTypes } from "./OrdersUtil";
 
 const fetchedData = [
   {
@@ -62,11 +63,9 @@ const fetchedData = [
 const Orders = () => {
   const params = useParams();
 
-  const possibleOrdersTypes = ["unpaid", "not-send", "returns"];
-
   if (
     !params.ordersType ||
-    possibleOrdersTypes.indexOf(params.ordersType) < 0
+    availableOrdersTypes.indexOf(params.ordersType) < 0
   ) {
     return (
       <Typography
@@ -81,24 +80,25 @@ const Orders = () => {
   }
 
   return (
-    <Box sx={{ m: 10 }}>
-      <Box sx={{ display: "flex", alignItems: "center", mb: 5 }}>
-        <Typography variant={"h5"} color={"text.primary"}>
-          Orders <span style={{ color: "grey" }}>{params.ordersType}</span>
-        </Typography>
-        <IconButton size={"small"} sx={{ ml: 2 }}>
-          <KeyboardArrowDownIcon />
-        </IconButton>
-      </Box>
+    <Box sx={{ mx: 10, my: 5 }}>
+      <OrdersHeader ordersType={params.ordersType} />
       <Divider />
-      <Paper sx={{ mt: 3, p: 5, width: "auto" }}>
-        <FilterSelect sx={{ mt: 3, mb: 6 }} />
-        <Box display={"flex"} flexDirection={"column"} gap={7}>
-          {fetchedData.map((order) => (
-            <OrderPaper order={order} />
-          ))}
-        </Box>
-      </Paper>
+      {fetchedData.length > 0 ? (
+        <Paper sx={{ mt: 3, p: 5, width: "auto" }}>
+          <FilterSelect sx={{ mt: 3, mb: 6 }} />
+          <Box display={"flex"} flexDirection={"column"} gap={7}>
+            {fetchedData.map((order) => (
+              <OrderPaper order={order} />
+            ))}
+          </Box>
+        </Paper>
+      ) : (
+        <Paper sx={{ mt: 3, py: 40, width: "auto", textAlign: "center" }}>
+          <Typography variant={"h5"} color={"text.secondary"}>
+            No product available
+          </Typography>
+        </Paper>
+      )}
     </Box>
   );
 };
