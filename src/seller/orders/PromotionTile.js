@@ -22,7 +22,7 @@ const PromotionTile = ({ promotionImageUrl, label, tooltip, ...props }) => {
           component={"img"}
           src={promotionImageUrl}
           alt={""}
-          sx={{ m: 4, width: "50%", height: "auto" }}
+          sx={{ m: 4, width: "45%", height: "auto" }}
         />
         <CardContent>
           <Typography variant={"body2"}>{label}</Typography>
