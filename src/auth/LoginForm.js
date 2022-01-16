@@ -16,7 +16,7 @@ const initialState = {
 const LoginForm = () => {
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [error, setError] = useState(false);
+  const { error } = useState(false);
 
   const [showPassword, setShowPassword] = useState(false);
   const [isSignup, setIsSignup] = useState(false);
