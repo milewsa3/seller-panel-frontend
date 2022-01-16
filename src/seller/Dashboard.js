@@ -2,12 +2,12 @@ import React, { useEffect } from "react";
 import { Grid } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { isUserLoggedIn } from "../util/user/userUtils";
-import OrdersWidget from "./widget/order/OrdersWidget";
-import RankingOfOffersWidget from "./widget/RankingOfOffersWidget";
-import BuyerFeedbackWidget from "./widget/BuyerFeedbackWidget";
-import SalesAdviceWidget from "./widget/SalesAdviceWidget";
-import SalesChartWidget from "./widget/SalesChartWidget";
-import QualityOfSalesWidget from "./widget/QualityOfSalesWidget";
+import OrdersWidget from "./orders/OrdersWidget";
+import RankingOfOffersWidget from "./rankingOfOffers/RankingOfOffersWidget";
+import BuyerFeedbackWidget from "./buyerFeedback/BuyerFeedbackWidget";
+import SalesAdviceWidget from "./salesAdvice/SalesAdviceWidget";
+import SalesChartWidget from "./salesChart/SalesChartWidget";
+import QualityOfSalesWidget from "./qualityOfSales/QualityOfSalesWidget";
 
 const Dashboard = () => {
   const navigate = useNavigate();
@@ -34,22 +34,27 @@ const Dashboard = () => {
       </Grid>
       <Grid item xs={12} md={7}>
         <Grid container spacing={3} direction="column">
-          <Grid item xs={9}>
+          <Grid item xs={12} sm={9}>
             <Grid container spacing={3}>
-              <Grid item xs={5} md={4}>
+              <Grid item xs={12} sm={5} md={4}>
                 <BuyerFeedbackWidget />
               </Grid>
-              <Grid item xs={7} md={8}>
+              <Grid item xs={12} sm={7} md={8}>
                 <Grid container spacing={3} direction={"column"}>
-                  <Grid item xs={8}>
+                  <Grid
+                    item
+                    xs={12}
+                    sm={8}
+                    sx={{ width: "-webkit-fill-available" }}
+                  >
                     <RankingOfOffersWidget />
                   </Grid>
-                  <Grid item xs={4} >
+                  <Grid item xs={12} sm={4}>
                     <Grid container spacing={3}>
-                      <Grid item xs={6}>
+                      <Grid item xs={12} sm={6}>
                         <SalesAdviceWidget />
                       </Grid>
-                      <Grid item xs={6}>
+                      <Grid item xs={12} sm={6}>
                         <SalesChartWidget />
                       </Grid>
                     </Grid>
@@ -58,7 +63,7 @@ const Dashboard = () => {
               </Grid>
             </Grid>
           </Grid>
-          <Grid item xs={3}>
+          <Grid item xs={12} sm={3}>
             <QualityOfSalesWidget />
           </Grid>
         </Grid>

@@ -1,5 +1,12 @@
 import React from "react";
-import { Card, CardActionArea, CardContent, CardMedia, Tooltip, Typography, } from "@mui/material";
+import {
+  Card,
+  CardActionArea,
+  CardContent,
+  CardMedia,
+  Tooltip,
+  Typography,
+} from "@mui/material";
 import InfoIcon from "@mui/icons-material/Info";
 
 const PromotionTile = ({ promotionImageUrl, label, tooltip, ...props }) => {
@@ -15,7 +22,7 @@ const PromotionTile = ({ promotionImageUrl, label, tooltip, ...props }) => {
           component={"img"}
           src={promotionImageUrl}
           alt={""}
-          sx={{ m: 4, width: "60px", height: "auto" }}
+          sx={{ m: 4, width: "50%", height: "auto" }}
         />
         <CardContent>
           <Typography variant={"body2"}>{label}</Typography>

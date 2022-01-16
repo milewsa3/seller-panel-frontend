@@ -1,5 +1,5 @@
 import React from "react";
-import WidgetLayout from "./WidgetLayout";
+import WidgetLayout from "../WidgetLayout";
 import { useTranslation } from "react-i18next";
 
 const QualityOfSalesWidget = () => {
