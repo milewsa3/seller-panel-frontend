@@ -1,11 +1,12 @@
-import React from "react";
-import { useParams } from "react-router-dom";
-import { Divider, Paper, Typography } from "@mui/material";
+import { useLocation, useNavigate, useParams } from "react-router-dom";
+import { Divider, Pagination, Paper, Stack } from "@mui/material";
 import Box from "@mui/material/Box";
 import FilterSelect from "./FilterSelect";
 import OrderPaper from "./OrderPaper";
 import OrdersHeader from "./OrdersHeader";
 import { availableOrdersTypes } from "./OrdersUtil";
+import InvalidOrdersType from "./error/InvalidOrdersType";
+import NoProductAvailable from "./error/NoProductAvailable";
 
 const fetchedData = [
   {
@@ -62,21 +63,19 @@ const fetchedData = [
 
 const Orders = () => {
   const params = useParams();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handlePageChange = (event, value) => {
+    const pathname = location.pathname;
+    navigate(pathname.slice(0, pathname.lastIndexOf("/")) + "/" + value);
+  };
 
   if (
     !params.ordersType ||
     availableOrdersTypes.indexOf(params.ordersType) < 0
   ) {
-    return (
-      <Typography
-        marginTop={5}
-        textAlign={"center"}
-        variant={"h4"}
-        color={"text.primary"}
-      >
-        Invalid orders type
-      </Typography>
-    );
+    return <InvalidOrdersType />;
   }
 
   return (
@@ -90,14 +89,18 @@ const Orders = () => {
             {fetchedData.map((order) => (
               <OrderPaper order={order} />
             ))}
+            <Stack spacing={2} alignSelf={"center"}>
+              <Pagination
+                count={10}
+                page={parseInt(params.page)}
+                color="secondary"
+                onChange={handlePageChange}
+              />
+            </Stack>
           </Box>
         </Paper>
       ) : (
-        <Paper sx={{ mt: 3, py: 40, width: "auto", textAlign: "center" }}>
-          <Typography variant={"h5"} color={"text.secondary"}>
-            No product available
-          </Typography>
-        </Paper>
+        <NoProductAvailable />
       )}
     </Box>
   );

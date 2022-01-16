@@ -16,19 +16,19 @@ const OrdersWidget = () => {
           type={t("orders-unpaid")}
           number={35}
           numberColor={"text.secondary"}
-          linkTo={"/orders/unpaid"}
+          linkTo={"/orders/unpaid/1"}
         />
         <OrdersDetail
           type={t("orders-not-send")}
           number={16}
           numberColor={"warning.main"}
-          linkTo={"/orders/not-send"}
+          linkTo={"/orders/not-send/1"}
         />
         <OrdersDetail
           type={t("orders-returns")}
           number={9}
           numberColor={"error.main"}
-          linkTo={"/orders/returns"}
+          linkTo={"/orders/returns/1"}
         />
         <Grid
           container

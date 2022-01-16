@@ -11,7 +11,7 @@ function App() {
       <Routes>
         <Route exact path="/" element={<Dashboard />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/orders/:ordersType" element={<Orders />} />
+        <Route path="/orders/:ordersType/:page" element={<Orders />} />
       </Routes>
     </Router>
   );
