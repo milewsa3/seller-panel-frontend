@@ -3,7 +3,7 @@ import LoginForm from "./LoginForm";
 import { Box, useMediaQuery } from "@mui/material";
 import LoginAd from "./LoginAd";
 import { useTheme } from "@emotion/react";
-import { clearUser } from "../util/user/userUtils";
+import { clearUser } from "../../util/user/userUtils";
 
 const Login = () => {
   const theme = useTheme();

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box, Button, Divider, Grid, Paper, Typography } from "@mui/material";
 import AuthInput from "./AuthInput";
-import { defaultUser } from "../util/user/userUtils";
+import { defaultUser } from "../../util/user/userUtils";
 import { useTranslation } from "react-i18next";
 
 const initialState = {

@@ -18,6 +18,8 @@
   "login-form-go-to-sign-up": "Don't have an account? Sign Up",
   "login-form-go-to-sign-in": "Already have an account? Sign In",
 
+  "error-page-not-found": "Page not found \uD83D\uDE1E",
+
   "en": "English",
   "pl": "Polish",
 
@@ -53,5 +55,15 @@
   "orders-bought-by": "Bought by",
   "orders-address": "Address",
   "orders-telephone": "tel",
-  "orders-delivery-company": "Delivery company"
+  "orders-delivery-company": "Delivery company",
+  "orders-no-product-available": "No product available",
+
+  "ranking-of-offers-sort-filter": "Filter",
+  "ranking-of-offers-buying-frequency-the-largest": "buying frequency: the largest",
+  "ranking-of-offers-buying-frequency-the-smallest": "buying frequency: the smallest",
+  "ranking-of-offers-time-filter": "Time filter",
+  "ranking-of-offers-in-last-10-days": "in last: 10 days",
+  "ranking-of-offers-in-last-month": "in last: month",
+  "ranking-of-offers-bought-by": "Bought by",
+  "ranking-of-offers-people-for": "people for"
 }

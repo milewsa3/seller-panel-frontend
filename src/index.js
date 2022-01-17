@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./App";
 import { Provider } from "react-redux";
 import "./util/language/i18n";
-import { store } from "./redux/store";
+import { store } from "./app/redux/store";
 import ThemeWrapper from "./util/theme/ThemeWrapper";
 
 ReactDOM.render(

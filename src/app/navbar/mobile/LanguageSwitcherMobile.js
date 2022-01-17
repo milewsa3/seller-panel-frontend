@@ -1,6 +1,6 @@
 import React from "react";
 import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
-import { availableLanguages } from "../../util/language/LanguageUtils";
+import { availableLanguages } from "../../../util/language/LanguageUtils";
 import Box from "@mui/material/Box";
 import { useTranslation } from "react-i18next";
 

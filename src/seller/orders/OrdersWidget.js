@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import WidgetLayout from "../WidgetLayout";
 import { useTranslation } from "react-i18next";
 import Box from "@mui/material/Box";
@@ -6,27 +6,41 @@ import OrdersDetail from "./OrdersDetail";
 import { Grid, Typography } from "@mui/material";
 import PromotionTile from "./PromotionTile";
 
+const initOrderCounts = {
+  notSendCount: 0,
+  unpaidCount: 0,
+  returnsCount: 0,
+};
+
 const OrdersWidget = () => {
   const { t } = useTranslation();
+  const [orderCounts, setOrderCounts] = useState(initOrderCounts);
+
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_BACKEND_URI}/orders/count`)
+      .then((res) => res.json())
+      .then((data) => setOrderCounts(data))
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <WidgetLayout title={t("orders")} disableNavigate>
       <Box>
         <OrdersDetail
           type={t("orders-unpaid")}
-          number={35}
+          number={orderCounts.unpaidCount}
           numberColor={"text.secondary"}
           linkTo={"/orders/unpaid/1"}
         />
         <OrdersDetail
           type={t("orders-not-send")}
-          number={16}
+          number={orderCounts.notSendCount}
           numberColor={"warning.main"}
           linkTo={"/orders/not-send/1"}
         />
         <OrdersDetail
           type={t("orders-returns")}
-          number={9}
+          number={orderCounts.returnsCount}
           numberColor={"error.main"}
           linkTo={"/orders/returns/1"}
         />

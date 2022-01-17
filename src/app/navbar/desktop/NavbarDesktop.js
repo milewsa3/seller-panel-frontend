@@ -5,7 +5,7 @@ import LanguageSwitcher from "./LanguageSwitcher";
 import Notificator from "./Notificator";
 import AccountSwitcher from "./AccountSwitcher";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../util/user/userUtils";
+import { logout } from "../../../util/user/userUtils";
 import { useTheme } from "@emotion/react";
 import { useTranslation } from "react-i18next";
 

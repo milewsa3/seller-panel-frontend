@@ -3,7 +3,7 @@ import { ListItemButton, ListItemIcon, ListItemText } from "@mui/material";
 import LogoutIcon from "@mui/icons-material/Logout";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
-import { logout } from "../../util/user/userUtils";
+import { logout } from "../../../util/user/userUtils";
 
 const LogoutMobile = () => {
   const { t } = useTranslation();
