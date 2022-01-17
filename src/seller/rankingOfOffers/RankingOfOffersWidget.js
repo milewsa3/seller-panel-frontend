@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import WidgetLayout from "../WidgetLayout";
 import { useTranslation } from "react-i18next";
 import RankingPosition from "./RankingPosition";
@@ -6,44 +6,16 @@ import Box from "@mui/material/Box";
 
 const RankingOfOffersWidget = () => {
   const { t } = useTranslation();
+  const [fetchedRankingOffers, setFetchedRankingOffers] = useState([]);
 
-  const fetchedData = [
-    {
-      position: 1,
-      itemFullName: "Book J.K Rowling - “How to be successful?”",
-      numberOfSales: 20,
-      profit: 1540,
-      currency: "zł",
-    },
-    {
-      position: 2,
-      itemFullName: "Book John Flanagan - “How to train your dog?”",
-      numberOfSales: 15,
-      profit: 1200,
-      currency: "zł",
-    },
-    {
-      position: 3,
-      itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-      numberOfSales: 10,
-      profit: 400,
-      currency: "zł",
-    },
-    {
-      position: 4,
-      itemFullName: "Book John Flanagan - “How to train your dog?”",
-      numberOfSales: 15,
-      profit: 1200,
-      currency: "zł",
-    },
-    {
-      position: 5,
-      itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-      numberOfSales: 10,
-      profit: 400,
-      currency: "zł",
-    },
-  ];
+  useEffect(() => {
+    fetch(`${process.env.REACT_APP_BACKEND_URI}/ranking-offers`)
+      .then((res) => res.json())
+      .then((data) => {
+        setFetchedRankingOffers(data.content);
+      })
+      .catch((err) => console.log(err));
+  }, []);
 
   return (
     <WidgetLayout
@@ -53,10 +25,10 @@ const RankingOfOffersWidget = () => {
       <Box
         sx={{ maxHeight: { sm: "300px", md: "230px" }, overflowY: "scroll" }}
       >
-        {fetchedData.map((el) => (
+        {fetchedRankingOffers.map((el, index) => (
           <RankingPosition
-            position={el.position}
-            itemFullName={el.itemFullName}
+            position={index + 1}
+            itemFullName={el.fullItemName}
             numberOfSales={el.numberOfSales}
             profit={el.profit}
             currency={el.currency}

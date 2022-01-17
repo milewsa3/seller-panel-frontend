@@ -9,59 +9,6 @@ import InvalidOrdersType from "./error/InvalidOrdersType";
 import NoProductAvailable from "./error/NoProductAvailable";
 import { useEffect, useState } from "react";
 
-// const fetchedOrders = [
-//   {
-//     itemFullName: "Book J.K Rowling - “How to be successful?”",
-//     imgUrl: "/images/orders/notebook.png",
-//     price: 1540,
-//     currency: "zł",
-//     boughtBy: "Bartosz Zdybel",
-//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
-//     telephone: "517307568",
-//     deliveryCompany: "InPost",
-//   },
-//   {
-//     itemFullName: "Book John Flanagan - “How to train your dog?”",
-//     imgUrl: "/images/orders/python-tutorial.jpg",
-//     price: 1200,
-//     currency: "zł",
-//     boughtBy: "Bartosz Zdybel",
-//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
-//     telephone: "517307568",
-//     deliveryCompany: "InPost",
-//   },
-//   {
-//     itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-//     imgUrl: "/images/orders/harry-potter-books.webp",
-//     price: 400,
-//     currency: "zł",
-//     boughtBy: "Bartosz Zdybel",
-//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
-//     telephone: "517307568",
-//     deliveryCompany: "DPD",
-//   },
-//   {
-//     itemFullName: "Book John Flanagan - “How to train your dog?”",
-//     imgUrl: "/images/orders/java-tutorial.jpg",
-//     price: 1200,
-//     currency: "zł",
-//     boughtBy: "Bartosz Zdybel",
-//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
-//     telephone: "517307568",
-//     deliveryCompany: "InPost",
-//   },
-//   {
-//     itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-//     imgUrl: "/images/orders/notebook.png",
-//     price: 400,
-//     currency: "zł",
-//     boughtBy: "Bartosz Zdybel",
-//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
-//     telephone: "517307568",
-//     deliveryCompany: "DPD",
-//   },
-// ];
-
 const Orders = () => {
   const params = useParams();
   const location = useLocation();

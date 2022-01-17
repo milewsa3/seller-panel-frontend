@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Divider, Pagination, Paper, Stack } from "@mui/material";
 import RankingOfOffersSearch from "./RankingOfOffersSearch";
 import RankingOfOffersFilters from "./filter/RankingOfOffersFilters";
@@ -10,6 +10,22 @@ const RankingOfOffersGrid = () => {
   const params = useParams();
   const navigate = useNavigate();
   const location = useLocation();
+  const [fetchedRankingOffers, setFetchedRankingOffers] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URI}/ranking-offers/?page=${
+        params.page - 1
+      }`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setFetchedRankingOffers(data.content);
+        setTotalPages(data.totalPages);
+      })
+      .catch((err) => console.log(err));
+  }, [params]);
 
   const handlePageChange = (event, value) => {
     const pathname = location.pathname;
@@ -30,12 +46,13 @@ const RankingOfOffersGrid = () => {
       <RankingOfOffersFilters sx={{ mb: 4 }} />
       <Divider />
       <Box display={"flex"} flexDirection={"column"} gap={7} sx={{ my: 3 }}>
-        <RankingOfOffersPaper />
-        <RankingOfOffersPaper />
+        {fetchedRankingOffers.map((rankingOffer) => (
+          <RankingOfOffersPaper rankingOffer={rankingOffer} />
+        ))}
       </Box>
       <Stack spacing={2} alignSelf={"center"}>
         <Pagination
-          count={10}
+          count={totalPages}
           page={parseInt(params.page)}
           color="secondary"
           onChange={handlePageChange}

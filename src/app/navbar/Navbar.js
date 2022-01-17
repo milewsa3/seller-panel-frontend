@@ -30,7 +30,7 @@ export default function Navbar() {
   const { t } = useTranslation();
 
   const [user, setUser] = useState();
-  const isMobileMenu = useMediaQuery(theme.breakpoints.down("sm"));
+  const isMobileMenu = useMediaQuery(theme.breakpoints.down("md"));
 
   useEffect(() => {
     if (isUserLoggedIn()) {
