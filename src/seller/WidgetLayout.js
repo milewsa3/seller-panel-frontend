@@ -5,7 +5,7 @@ import IosShareIcon from "@mui/icons-material/IosShare";
 import IconButton from "@mui/material/IconButton";
 import { useTranslation } from "react-i18next";
 import PropTypes from "prop-types";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 
 const WidgetLayout = ({
   sx = [],
@@ -18,14 +18,14 @@ const WidgetLayout = ({
   ...props
 }) => {
   const { t } = useTranslation();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
   const topNavHeight = 12;
 
   const handleNavigate = () => {
     if (navigateTo) {
-      navigate(navigateTo)
+      navigate(navigateTo);
     }
-  }
+  };
 
   const styles = {
     root: { height: "100%", overflow: "hidden" },

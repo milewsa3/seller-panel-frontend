@@ -53,5 +53,12 @@
   "orders-bought-by": "Kupione przez",
   "orders-address": "Adres",
   "orders-telephone": "tel",
-  "orders-delivery-company": "Firma dostawcza"
+  "orders-delivery-company": "Firma dostawcza,",
+
+  "ranking-of-offers-sort-filter": "Filtr",
+  "ranking-of-offers-buying-frequency-the-largest": "częstość kupowania: największa",
+  "ranking-of-offers-buying-frequency-the-smallest": "częstość kupowania: najmniejsza",
+  "ranking-of-offers-time-filter": "Filtr czasowy",
+  "ranking-of-offers-in-last-10-days": "przez ostatnie: 10 dni",
+  "ranking-of-offers-in-last-month": "przez ostatni: miesiąc"
 }

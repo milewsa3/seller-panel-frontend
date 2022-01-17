@@ -46,7 +46,10 @@ const RankingOfOffersWidget = () => {
   ];
 
   return (
-    <WidgetLayout title={t("ranking-of-offers")} navigateTo={"/ranking-of-offers"}>
+    <WidgetLayout
+      title={t("ranking-of-offers")}
+      navigateTo={"/ranking-of-offers/1"}
+    >
       <Box
         sx={{ maxHeight: { sm: "300px", md: "230px" }, overflowY: "scroll" }}
       >
