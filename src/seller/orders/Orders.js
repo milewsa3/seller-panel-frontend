@@ -7,64 +7,81 @@ import OrdersHeader from "./OrdersHeader";
 import { availableOrdersTypes } from "./OrdersUtil";
 import InvalidOrdersType from "./error/InvalidOrdersType";
 import NoProductAvailable from "./error/NoProductAvailable";
+import { useEffect, useState } from "react";
 
-const fetchedData = [
-  {
-    itemFullName: "Book J.K Rowling - “How to be successful?”",
-    imgUrl: "/images/orders/notebook.png",
-    price: 1540,
-    currency: "zł",
-    boughtBy: "Bartosz Zdybel",
-    address: "ul. Fiołkowa 24A 05-456 Warszawa",
-    telephone: "517307568",
-    deliveryCompany: "InPost",
-  },
-  {
-    itemFullName: "Book John Flanagan - “How to train your dog?”",
-    imgUrl: "/images/orders/python-tutorial.jpg",
-    price: 1200,
-    currency: "zł",
-    boughtBy: "Bartosz Zdybel",
-    address: "ul. Fiołkowa 24A 05-456 Warszawa",
-    telephone: "517307568",
-    deliveryCompany: "InPost",
-  },
-  {
-    itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-    imgUrl: "/images/orders/harry-potter-books.webp",
-    price: 400,
-    currency: "zł",
-    boughtBy: "Bartosz Zdybel",
-    address: "ul. Fiołkowa 24A 05-456 Warszawa",
-    telephone: "517307568",
-    deliveryCompany: "DPD",
-  },
-  {
-    itemFullName: "Book John Flanagan - “How to train your dog?”",
-    imgUrl: "/images/orders/java-tutorial.jpg",
-    price: 1200,
-    currency: "zł",
-    boughtBy: "Bartosz Zdybel",
-    address: "ul. Fiołkowa 24A 05-456 Warszawa",
-    telephone: "517307568",
-    deliveryCompany: "InPost",
-  },
-  {
-    itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
-    imgUrl: "/images/orders/notebook.png",
-    price: 400,
-    currency: "zł",
-    boughtBy: "Bartosz Zdybel",
-    address: "ul. Fiołkowa 24A 05-456 Warszawa",
-    telephone: "517307568",
-    deliveryCompany: "DPD",
-  },
-];
+// const fetchedOrders = [
+//   {
+//     itemFullName: "Book J.K Rowling - “How to be successful?”",
+//     imgUrl: "/images/orders/notebook.png",
+//     price: 1540,
+//     currency: "zł",
+//     boughtBy: "Bartosz Zdybel",
+//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
+//     telephone: "517307568",
+//     deliveryCompany: "InPost",
+//   },
+//   {
+//     itemFullName: "Book John Flanagan - “How to train your dog?”",
+//     imgUrl: "/images/orders/python-tutorial.jpg",
+//     price: 1200,
+//     currency: "zł",
+//     boughtBy: "Bartosz Zdybel",
+//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
+//     telephone: "517307568",
+//     deliveryCompany: "InPost",
+//   },
+//   {
+//     itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
+//     imgUrl: "/images/orders/harry-potter-books.webp",
+//     price: 400,
+//     currency: "zł",
+//     boughtBy: "Bartosz Zdybel",
+//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
+//     telephone: "517307568",
+//     deliveryCompany: "DPD",
+//   },
+//   {
+//     itemFullName: "Book John Flanagan - “How to train your dog?”",
+//     imgUrl: "/images/orders/java-tutorial.jpg",
+//     price: 1200,
+//     currency: "zł",
+//     boughtBy: "Bartosz Zdybel",
+//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
+//     telephone: "517307568",
+//     deliveryCompany: "InPost",
+//   },
+//   {
+//     itemFullName: "Book Rick Riordan - “Olimpijscy Herosi?”",
+//     imgUrl: "/images/orders/notebook.png",
+//     price: 400,
+//     currency: "zł",
+//     boughtBy: "Bartosz Zdybel",
+//     address: "ul. Fiołkowa 24A 05-456 Warszawa",
+//     telephone: "517307568",
+//     deliveryCompany: "DPD",
+//   },
+// ];
 
 const Orders = () => {
   const params = useParams();
   const location = useLocation();
   const navigate = useNavigate();
+  const [fetchedOrders, setFetchedOrders] = useState([]);
+  const [totalPages, setTotalPages] = useState(1);
+
+  useEffect(() => {
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URI}/orders/${params.ordersType}/?page=${
+        params.page - 1
+      }`
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        setFetchedOrders(data.content);
+        setTotalPages(data.totalPages);
+      })
+      .catch((err) => console.log(err));
+  }, [params]);
 
   const handlePageChange = (event, value) => {
     const pathname = location.pathname;
@@ -82,16 +99,16 @@ const Orders = () => {
     <Box sx={{ mx: 10, my: 5 }}>
       <OrdersHeader ordersType={params.ordersType} />
       <Divider />
-      {fetchedData.length > 0 ? (
+      {fetchedOrders.length > 0 ? (
         <Paper sx={{ mt: 3, p: 5, width: "auto" }}>
           <FilterSelect sx={{ mt: 3, mb: 6 }} />
           <Box display={"flex"} flexDirection={"column"} gap={7}>
-            {fetchedData.map((order) => (
-              <OrderPaper order={order} />
+            {fetchedOrders.map((order) => (
+              <OrderPaper key={order.id} order={order} />
             ))}
             <Stack spacing={2} alignSelf={"center"}>
               <Pagination
-                count={10}
+                count={totalPages}
                 page={parseInt(params.page)}
                 color="secondary"
                 onChange={handlePageChange}
