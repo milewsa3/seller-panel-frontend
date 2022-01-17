@@ -2,7 +2,7 @@ import * as React from "react";
 import { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import FormControl from "@mui/material/FormControl";
-import { getUser, isUserLoggedIn } from "../../util/user/userUtils";
+import { getUser, isUserLoggedIn } from "../../../util/user/userUtils";
 import { MenuItem, Select } from "@mui/material";
 
 const AccountSwitcher = ({ ...props }) => {

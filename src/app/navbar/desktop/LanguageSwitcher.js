@@ -2,7 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import IconButton from "@mui/material/IconButton";
 import Box from "@mui/material/Box";
-import { availableLanguages } from "../../util/language/LanguageUtils";
+import { availableLanguages } from "../../../util/language/LanguageUtils";
 
 const LanguageSwitcher = ({ ...props }) => {
   const { i18n } = useTranslation();
