@@ -1,11 +1,11 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { Provider } from 'react-redux';
-import "./i18n";
-import { store } from './app/store';
-import ThemeWrapper from './wrapper/ThemeWrapper';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { Provider } from "react-redux";
+import "./util/language/i18n";
+import { store } from "./app/redux/store";
+import ThemeWrapper from "./util/theme/ThemeWrapper";
 
 ReactDOM.render(
   <React.StrictMode>
@@ -15,5 +15,5 @@ ReactDOM.render(
       </ThemeWrapper>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

@@ -1,4 +1,69 @@
 {
-  "title": "Tytuł",
-  "placeholder": "Czego potrzebujesz ziomeczku?"
+  "navbar-title": "Panel sprzedawcy",
+
+  "login-ad-title": "Połącz się z klientami",
+  "login-ad-body-1": "Zobacz produkty i nowości",
+  "login-ad-body-2": "Sprawdź aktywność klientów",
+  "login-ad-body-3": "Zobacz więcej",
+
+  "notification-empty": "Brak nowych powiadomień",
+
+  "login-form-email": "Email",
+  "login-form-password": "Hasło",
+  "login-form-repeat-password": "Powtórz hasło",
+  "login-form-first-name": "Imię",
+  "login-form-last-name": "Nazwisko",
+  "login-form-sign-in": "Zaloguj się",
+  "login-form-sign-up": "Zarejestruj się",
+  "login-form-go-to-sign-up": "Nie masz konta? Zarejestruj się",
+  "login-form-go-to-sign-in": "Masz już konto? Zaloguj się",
+
+  "error-page-not-found": "Strona nie znaleziona \uD83D\uDE1E",
+
+  "en": "Angielski",
+  "pl": "Polski",
+
+  "theme-switcher": "Zmiana motywu",
+  "account-switcher": "Zmiana konta",
+  "logout": "Wyloguj",
+
+  "orders": "Zamówienia",
+  "buyer-feedback": "Opinie kupujących",
+  "ranking-of-offers": "Ranking Ofert",
+  "sales-advice": "Porady sprzedażowe",
+  "sales-chart": "Wykres sprzedaży",
+  "quality-of-sales": "Jakość Sprzedaży",
+  "not-implemented": "Nie zaimplementowane",
+
+  "orders-unpaid": "Nie zapłacone",
+  "orders-not-send": "Nie wysłane",
+  "orders-returns": "Zwrócone",
+  "orders-promotion": "Promocja ofert",
+  "orders-promotion-low": "Niska",
+  "orders-promotion-medium": "Średnia",
+  "orders-promotion-high": "Wysoka",
+
+  "orders-promotion-low-tooltip": "Najtańsza promocja",
+  "orders-promotion-medium-tooltip": "Średnia promocja",
+  "orders-promotion-high-tooltip": "Najwyższa promocja",
+
+  "orders-filter": "Filtr",
+  "orders-accuracy-the-greatest":  "dopasowanie: największe",
+  "orders-accuracy-the-smallest":  "dopasowanie: najmniejsze",
+  "orders-price-the-highest":  "cena: od najwyższej",
+  "orders-price-the-lowest":  "cena: od najniższej",
+  "orders-bought-by": "Kupione przez",
+  "orders-address": "Adres",
+  "orders-telephone": "tel",
+  "orders-delivery-company": "Firma dostawcza,",
+  "orders-no-product-available": "Brak dostępnych produktów",
+
+  "ranking-of-offers-sort-filter": "Filtr",
+  "ranking-of-offers-buying-frequency-the-largest": "częstość kupowania: największa",
+  "ranking-of-offers-buying-frequency-the-smallest": "częstość kupowania: najmniejsza",
+  "ranking-of-offers-time-filter": "Filtr czasowy",
+  "ranking-of-offers-in-last-10-days": "przez ostatnie: 10 dni",
+  "ranking-of-offers-in-last-month": "przez ostatni: miesiąc",
+  "ranking-of-offers-bought-by": "Kupione przez",
+  "ranking-of-offers-people-for": "ludzi za"
 }
