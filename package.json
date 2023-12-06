@@ -1,7 +1,6 @@
 {
   "name": "seller-panel",
   "version": "0.1.0",
-  "homepage": "https://milewsa3.github.io/seller-panel-frontend/",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.7.0",
