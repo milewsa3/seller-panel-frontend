@@ -9,6 +9,11 @@ const availableLanguages = [
     fullName: "Polish",
     flagUrl: "/images/flags/poland-flag-icon-32.png",
   },
+  {
+    name: "it",
+    fullName: "Italian",
+    flagUrl: "/images/flags/italy-flag-icon-32.png",
+  },
 ];
 
 module.exports = {

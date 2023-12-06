@@ -1,0 +1,70 @@
+{
+  "navbar-title": "Pannello del Venditore",
+
+  "login-ad-title": "Connettiti con i tuoi clienti",
+  "login-ad-body-1": "Visualizza prodotti e aggiornamenti",
+  "login-ad-body-2": "Controlla l'attività dei clienti",
+  "login-ad-body-3": "Scopri di più",
+
+  "notification-empty": "Nessuna nuova notifica",
+
+  "login-form-email": "Indirizzo Email",
+  "login-form-password": "Password",
+  "login-form-repeat-password": "Ripeti Password",
+  "login-form-first-name": "Nome",
+  "login-form-last-name": "Cognome",
+  "login-form-sign-in": "Accedi",
+  "login-form-sign-up": "Registrati",
+  "login-form-go-to-sign-up": "Non hai un account? Registrati",
+  "login-form-go-to-sign-in": "Hai già un account? Accedi",
+
+  "error-page-not-found": "Pagina non trovata \uD83D\uDE1E",
+
+  "en": "Inglese",
+  "pl": "Polacco",
+  "it": "Italiano",
+
+  "theme-switcher": "Cambio Tema",
+  "account-switcher": "Cambio Account",
+  "logout": "Esci",
+
+  "orders": "Ordini",
+  "buyer-feedback": "Feedback dell'acquirente",
+  "ranking-of-offers": "Classifica delle offerte",
+  "sales-advice": "Consigli di vendita",
+  "sales-chart": "Grafico delle vendite",
+  "quality-of-sales": "Qualità delle vendite",
+  "not-implemented": "Non implementato",
+
+  "orders-unpaid": "Non pagati",
+  "orders-not-send": "Non inviati",
+  "orders-returns": "Resi",
+  "orders-promotion": "Promozione delle offerte",
+  "orders-promotion-low": "Bassa",
+  "orders-promotion-medium": "Media",
+  "orders-promotion-high": "Alta",
+
+  "orders-promotion-low-tooltip": "La promozione più economica",
+  "orders-promotion-medium-tooltip": "Promozione media",
+  "orders-promotion-high-tooltip": "La promozione più costosa",
+
+  "orders-filter": "Filtro",
+  "orders-accuracy-the-greatest":  "accuratezza: la più alta",
+  "orders-accuracy-the-smallest":  "accuratezza: la più bassa",
+  "orders-price-the-highest":  "prezzo: il più alto",
+  "orders-price-the-lowest":  "prezzo: il più basso",
+  "orders-bought-by": "Acquistato da",
+  "orders-address": "Indirizzo",
+  "orders-telephone": "tel",
+  "orders-delivery-company": "Compagnia di consegna",
+  "orders-no-product-available": "Prodotto non disponibile",
+
+  "ranking-of-offers-sort-filter": "Filtro",
+  "ranking-of-offers-buying-frequency-the-largest": "frequenza di acquisto: la più alta",
+  "ranking-of-offers-buying-frequency-the-smallest": "frequenza di acquisto: la più bassa",
+  "ranking-of-offers-time-filter": "Filtro temporale",
+  "ranking-of-offers-in-last-10-days": "negli ultimi: 10 giorni",
+  "ranking-of-offers-in-last-month": "negli ultimi: mese",
+  "ranking-of-offers-bought-by": "Acquistato da",
+  "ranking-of-offers-people-for": "persone per"
+}
