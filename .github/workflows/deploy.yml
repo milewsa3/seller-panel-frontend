@@ -30,4 +30,4 @@ jobs:
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          REACT_APP_BACKEND_URI: ${{ vars.REACT_APP_BACKEND_URI }}
+          REACT_APP_BACKEND_URI: ${{ secrets.REACT_APP_BACKEND_URI }}
