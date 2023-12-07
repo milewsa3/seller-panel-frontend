@@ -12,6 +12,10 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
+      - name: Hello world
+        run: echo Hello world $REACT_APP_BACKEND_URI !
+        env:
+          REACT_APP_BACKEND_URI: ${{ vars.REACT_APP_BACKEND_URI }}
       - uses: actions/checkout@v3
         with:
           submodules: true
