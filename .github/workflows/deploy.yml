@@ -1,4 +1,4 @@
-name: Azure Static Web Apps CI/CD
+name: Build and deploy app to Azure Web App
 
 on:
   workflow_dispatch:
@@ -10,6 +10,8 @@ on:
 jobs:
   build_and_deploy_job:
     runs-on: ubuntu-latest
+    environment: 
+      name: ${{ inputs.environment }}
     name: Build and Deploy Job
     steps:
       - name: Hello world
@@ -34,4 +36,4 @@ jobs:
           output_location: "build" # Built app content directory - optional
           ###### End of Repository/Build Configurations ######
         env:
-          REACT_APP_BACKEND_URI: ${{ secrets.REACT_APP_BACKEND_URI }}
+          REACT_APP_BACKEND_URI: ${{ vars.REACT_APP_BACKEND_URI }}
